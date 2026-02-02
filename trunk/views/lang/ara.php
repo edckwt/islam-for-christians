@@ -1,7 +1,7 @@
 <?php
 //========================== Language =======================//
 
-$ifclang['muslimelibrary'] = 'المكتبة الإسلامية';
+$ifclang['islam_for_christians'] = 'الاسلام للنصاري';
 
 
 $ifclang['tab-options'] = 'خصائص';

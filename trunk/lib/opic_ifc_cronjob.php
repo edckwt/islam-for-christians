@@ -84,7 +84,7 @@ register_deactivation_hook (__FILE__, 'cronstarter_ifc_deactivate');
 // here's the function we'd like to call with our cron job
 if(!function_exists('my_ifc_repeat_function')){
 function my_ifc_repeat_function() {
-	global $opicifc_cronjob;
+	global $opic_ifc_cronjob;
 	$opic_ifc_cronjob -> InsetPost();
 }
 }

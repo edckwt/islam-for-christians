@@ -1,6 +1,6 @@
 <form method="post" action="<?php admin_url( 'options-general.php?page='.OPICIFC_Page_SLUG ); ?>">
 <?php
-	echo wp_nonce_field( "edc-settings-page" ); 
+	echo wp_nonce_field(OPICIFC_Page_SLUG,OPICIFC_Page_SLUG."-settings-page"); 
 	
 	$IFCHtmlHelper = new html_IFC_helper();
 	$IFCHtmlHelper->opic_admin_tabs();

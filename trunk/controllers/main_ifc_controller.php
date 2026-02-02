@@ -30,7 +30,7 @@ class IslamforChristiansMaincontroller extends app_ifc_controlers {
 				echo $this->loadController('categories');
 				break;
 			default:
-				$this->loadController('options');
+				$this->loadController('language');
 				break;
 		}
 	}

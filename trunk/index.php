@@ -1,12 +1,17 @@
 <?php
 /**
-Plugin Name: Islam for Christians Archive
-Plugin URI: http://www.islamforchristians.com
-Description: Islam for Christians is a main informative online source of knowledge about the true message of prophet Jesus and how Muslims view him.
-Version: 1.1
-Author: EDC Team (E-Da`wah Committee)
-Author URI: http://www.mawthuq.net/en/
-License: Free
+ * Islam for Christians Archive
+ *
+ * Plugin Name: Islam for Christians Archive
+ * Plugin URI:  https://wordpress.org/plugins/islamic-archive-for-islam-for-christians/
+ * Description: Islam for Christians is a main informative online source of knowledge about the true message of prophet Jesus and how Muslims view him.
+ * Version:     1.3.5
+ * Author:      EDC TEAM (E-Dawah Committee)
+ * Author URI:  https://edc.org.kw
+ * License:     GPLv2 or later
+ * License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * Requires at least: 5.0
+ * Requires PHP: 7.4
 */
 
 define('OPICIFC_PLUGIN_PATH',plugin_dir_path( __FILE__ ));
@@ -41,7 +46,7 @@ function OPICIFC_plugin_install(){
 	add_option(OPICIFC_Input_SLUG.'version', '1.1');
 }
 function OPICIFC_plugin_uninstall(){
-	
+
 	$options = get_option(OPICIFC_Input_SLUG.'language');
  	if( is_array($options) && $options['uninstall'] === true){
 		delete_option(OPICIFC_Input_SLUG.'language');
@@ -50,9 +55,9 @@ function OPICIFC_plugin_uninstall(){
 		delete_option(OPICIFC_Input_SLUG.'version');
 	}
 }
-register_activation_hook(plugin_basename(__FILE__),'OPICIFC_plugin_install'); 
+register_activation_hook(plugin_basename(__FILE__),'OPICIFC_plugin_install');
 register_deactivation_hook(plugin_basename(__FILE__), 'OPICIFC_plugin_uninstall');
- 
+
 
 include_once(OPICIFC_PLUGIN_PATH.'load.php');
 ?>
